@@ -1,0 +1,22 @@
+{
+  "name": "cordova-plugin-videoclips",
+  "version": "1.0.7",
+  "description": "none",
+  "cordova": {
+    "id": "cordova-plugin-videoclips",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:a624669980/cordova-plugin-videoclips.git"
+  },
+  "keywords": [
+    "cordova",
+    "cordova-plugin",
+    "smallvideo"
+  ],
+  "author": "link",
+  "license": "ISC"
+}

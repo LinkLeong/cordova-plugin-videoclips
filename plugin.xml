@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-videoclips" version="1.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<name>videoclips</name>
+<js-module name="videoclips" src="www/videoclips.js"><clobbers target="upvideo" /></js-module>
+
+<platform name="android">
+
+    <hook type="after_plugin_add" src="scripts/android-install.js" />
+        <hook type="after_plugin_install" src="scripts/android-install.js" />
+        <hook type="before_plugin_rm" src="scripts/android-install.js" />
+        <hook type="before_plugin_uninstall" src="scripts/android-install.js" />
+
+<config-file parent="/*" target="res/xml/config.xml">
+<feature name="videoclips">
+<param name="android-package" value="AkeVideo.VideoPlugin" />
+</feature>
+</config-file>
+
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        </config-file>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+		    <activity android:name=".ake.VideoUpActivity"
+			   android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        </config-file>
+       
+        
+        <framework src="cjt.library.wheel:camera:1.1.9"/>
+		<framework src="com.iceteck.silicompressorr:silicompressor:2.2.2"/>
+		<source-file src="src/android/activity_video_up.xml" target-dir="res/layout" />
+
+
+</platform>
+
+
+</plugin>
