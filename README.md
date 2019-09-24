@@ -6,6 +6,8 @@
 
 cordova仿微信拍照录像插件
 
+![Image text](https://i.loli.net/2019/09/24/Vnh8UJYPbi5wr3L.jpg)
+
 ### 安装
 
 ```javascript
